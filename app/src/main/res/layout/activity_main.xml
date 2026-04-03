@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    tools:context=".MainActivity">
+
+    <!-- 标题 -->
+    <TextView
+        android:id="@+id/textTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="整点自动报时"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="?android:attr/textColorPrimary"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="48dp" />
+
+    <!-- 状态显示 -->
+    <TextView
+        android:id="@+id/textStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="整点报时已禁用 ✗"
+        android:textSize="18sp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintTop_toBottomOf="@id/textTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- 开关控制 -->
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/switchChime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="启用整点报时"
+        android:textSize="16sp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toBottomOf="@id/textStatus"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- 上次报时时间 -->
+    <TextView
+        android:id="@+id/textLastChime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="上次报时：暂无"
+        android:textSize="14sp"
+        android:textColor="?android:attr/textColorSecondary"
+        android:layout_marginTop="32dp"
+        app:layout_constraintTop_toBottomOf="@id/switchChime"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- 测试报时按钮 -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnTestChime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="测试报时"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toBottomOf="@id/textLastChime"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- 电池优化按钮 -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnRequestBatteryOptimization"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="允许后台运行（忽略电池优化）"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/btnTestChime"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- 说明文字 -->
+    <TextView
+        android:id="@+id/textDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="启用后，应用将在每个整点自动播报当前时间。为确保功能正常，请允许忽略电池优化。"
+        android:textSize="12sp"
+        android:textColor="?android:attr/textColorHint"
+        android:gravity="center"
+        android:layout_marginTop="48dp"
+        app:layout_constraintTop_toBottomOf="@id/btnRequestBatteryOptimization"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.8" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
