@@ -1,2 +1,57 @@
-# No build artifacts, dependencies, or temp files detected
-# Only markdown file added, no ignores needed
+```
+# Android build outputs
+build/
+.gradle/
+*/build/
+
+# APK and AAB files
+*.apk
+*.aab
+
+# Android Studio generated files
+local.properties
+captures/
+
+# IDE
+.vscode/
+.idea/
+
+# Environment
+.env
+.env.local
+*.env.*
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.swp
+
+# Coverage reports
+coverage/
+htmlcov/
+*.coverage
+
+# Python cache (if any Python files exist in the project)
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+
+# Node.js (if any JS/TS exists in the project)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Compiled Java classes (for Android projects)
+*.class
+*.jar
+*.war
+
+# Gradle cache
+.gradle/
+```
